@@ -1,0 +1,16 @@
+{
+    "name": "Poshmark Extension",
+    "version": "1.0.0",
+    "description": "Chrome extension for Poshmark",
+    "permissions": ["<all_urls>"],
+    "browser_action": {
+        "default_title": "Poshmark Extension",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["background.js"],
+        "run_at": "document_end"
+    }],
+    "manifest_version": 2
+}
